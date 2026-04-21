@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: 'Outfit', sans-serif;
+  background: radial-gradient(circle, #0f0f0f, #000);
+  color: #fff;
+  text-align: center;
+}
+
+.screen {
+  display: none;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.screen.active {
+  display: flex;
+}
+
+canvas {
+  background: rgba(0,0,0,0.6);
+  border: 2px solid cyan;
+  box-shadow: 0 0 20px cyan;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  color: cyan;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 10px cyan;
+}
+
+.glitch {
+  position: relative;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.glitch::before {
+  color: cyan;
+  animation: glitch 2s infinite;
+}
+
+.glitch::after {
+  color: magenta;
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% { clip-path: inset(0 0 90% 0); }
+  50% { clip-path: inset(10% 0 40% 0); }
+  100% { clip-path: inset(80% 0 5% 0); }
+}

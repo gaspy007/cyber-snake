@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Snake</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="startScreen" class="screen active">
+    <h1 class="glitch" data-text="CYBER SNAKE">CYBER SNAKE</h1>
+    <button id="startBtn">INITIALIZE</button>
+  </div>
+
+  <div id="gameScreen" class="screen">
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <p>Score: <span id="score">0</span></p>
+  </div>
+
+  <div id="gameOverScreen" class="screen">
+    <h1 class="glitch" data-text="SYSTEM FAILURE">SYSTEM FAILURE</h1>
+    <p>Final Score: <span id="finalScore"></span></p>
+    <button id="restartBtn">REBOOT</button>
+    <button id="leaderboardBtn">VIEW LEADERBOARD</button>
+  </div>
+
+  <div id="leaderboardScreen" class="screen">
+    <h1 class="glitch" data-text="TOP OPERATORS">TOP OPERATORS</h1>
+    <ul id="leaderboardList"></ul>
+    <button id="backBtn">BACK</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
